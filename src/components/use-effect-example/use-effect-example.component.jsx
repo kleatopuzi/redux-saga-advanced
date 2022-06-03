@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import Card from '../card/card.component';
+import Card from "../card/card.component";
 
 const UseEffectExample = () => {
   const [user, setUser] = useState(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("Bret");
+
+  useEffect(() => {
+    console.log("a");
+  }, []);
 
   useEffect(() => {
     if (searchQuery.length > 0) {
@@ -23,9 +27,9 @@ const UseEffectExample = () => {
   return (
     <Card>
       <input
-        type='search'
+        type="search"
         value={searchQuery}
-        onChange={event => setSearchQuery(event.target.value)}
+        onChange={(event) => setSearchQuery(event.target.value)}
       />
       {user ? (
         <div>
