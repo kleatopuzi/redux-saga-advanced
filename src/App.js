@@ -1,5 +1,5 @@
 import React from "react";
-
+import UseReducerExample from "./components/use-reducer-example/use-reducer.component";
 import SagasExample from "./components/sagas-example/sagas-example.component";
 
 import "./App.css";
@@ -7,7 +7,8 @@ import "./App.css";
 const App = (props) => {
   return (
     <div className="App">
-      <SagasExample />
+      <UseReducerExample />
+      {/* <SagasExample /> */}
     </div>
   );
 };
